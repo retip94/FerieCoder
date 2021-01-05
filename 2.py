@@ -1,11 +1,11 @@
 import requests, json
 from datetime import datetime
 import random
-from config import API_KEY
 import pytz
 from bs4 import BeautifulSoup
 
 # get current weather for given city
+API_KEY='6f3fd6fce29c2928050252e99609a1c6'
 city = 'Warszawa'
 r = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&lang=pl&appid={API_KEY}')
 if r.status_code == 200:
